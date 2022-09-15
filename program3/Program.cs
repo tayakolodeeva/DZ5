@@ -1,17 +1,17 @@
 ﻿// Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 Console.WriteLine("Задайте размер массива:");
 int size = Convert.ToInt32(Console.ReadLine());
-int [] array = new int[size];
+double [] array = new double[size];
 
 ArrayRandomNumbers(array);// Заполнение массива числами.Вывод созданного массива на экран.
 DifferenceOfNumbers(array);//Нахождение max и min числа, вычисление разницы. 
 
-void ArrayRandomNumbers(int[] array) 
+void ArrayRandomNumbers(double[] array) 
 {
     Console.Write("[ ");
     for (int i = 0; i < array.Length; i++)
     {
-        array[i]= new Random().Next(100,1000);
+        array[i]= new Random().NextDouble()*200;
     }
     for (int i = 0; i < array.Length; i++)
     {
@@ -19,11 +19,11 @@ void ArrayRandomNumbers(int[] array)
     }
     Console.Write(" ] - созданный массив,");
 }
-void DifferenceOfNumbers(int[] array)
+void DifferenceOfNumbers(double[] array)
 {
-    int max = array[1];
-    int min = array[1];
-    int difference = 0;
+    double max = array[1];
+    double min = array[1];
+    double difference = 0;
     for (int i = 0; i < array.Length; i++) 
     {
         if (array[i] > max)
