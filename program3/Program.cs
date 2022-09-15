@@ -11,7 +11,7 @@ void ArrayRandomNumbers(double[] array)
     Console.Write("[ ");
     for (int i = 0; i < array.Length; i++)
     {
-        array[i]= new Random().NextDouble()*200;
+        array[i] = Math.Round(new Random().NextDouble()*200, 2);
     }
     for (int i = 0; i < array.Length; i++)
     {
